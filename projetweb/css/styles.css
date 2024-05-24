@@ -1,3 +1,11 @@
+/* Général */
+
+
+/* Accueil */
+
+/* Contact */
+
+
 html {
   position: relative;
   min-height: 100%;
@@ -204,7 +212,7 @@ footer a:hover {
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 40% }
+  to { width: 100% }
 }
 
 /* The typewriter cursor effect */

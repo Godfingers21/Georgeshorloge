@@ -9,7 +9,9 @@
 </head>
 <body>
     <header>
-        <h1>Qui sommes nous ?</h1>
+        <div class="titre">
+            <h1>Qui sommes nous ?</h1>
+        </div>
         <div class="links">
             <nav>
                 <ul>
@@ -28,10 +30,26 @@
 
     <div class="about">
         <h2>À Propos de Nous</h2>
-        <p>Nous sommes Félix Terrien et Fayçal Kordjani-Bouaziz, les créateurs de Georges Horloge. Passionnés par la conception web et la technologie, nous avons combiné nos compétences pour créer cette expérience unique.</p>
-        <p>Nous avons travaillé dur pour vous offrir un site web divertissant et interactif. N'hésitez pas à nous contacter si vous avez des questions ou des commentaires.</p>
+        <div class="creators">
+            <div class="creator" onclick="showDescription('felix')">
+                <img src="../img/felix.jpg" alt="Félix Terrien">
+                <p>Félix Terrien</p>
+            </div>
+            <div class="creator" onclick="showDescription('faycal')">
+                <img src="../img/faycal.jpg" alt="Fayçal Kordjani-Bouaziz">
+                <p>Fayçal Kordjani-Bouaziz</p>
+            </div>
+        </div>
+        <div id="felixDescription" class="description">
+            <h3>Félix Terrien</h3>
+            <p>Description de Félix Terrien ici...</p>
+        </div>
+        <div id="faycalDescription" class="description">
+            <h3>Fayçal Kordjani-Bouaziz</h3>
+            <p>Description de Fayçal Kordjani-Bouaziz ici...</p>
+        </div>
     </div>
-
+    
     <footer>
         <p>© 2024 Félix Terrien et Fayçal Kordjani-Bouaziz - Tous droits réservés</p>
         <p><a href="contact.html">Contactez-nous</a></p>

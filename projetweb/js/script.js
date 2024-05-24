@@ -40,3 +40,14 @@ function mouseOver() {
         eyes.style.opacity = 0;
     }, 5000);
 }
+
+function showDescription(creator) {
+    // Cacher toutes les descriptions d'abord
+    var descriptions = document.querySelectorAll('.description');
+    descriptions.forEach(function(description) {
+        description.style.display = 'none';
+    });
+
+    // Afficher la description correspondante
+    document.getElementById(creator + 'Description').style.display = 'block';
+}
