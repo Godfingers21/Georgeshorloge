@@ -217,6 +217,12 @@ footer a:hover {
       margin-bottom: 10px;
   }
 
+
+  footer {
+    padding: 10px;
+  }
+
+  
   .horloge {
       height: 20vw;
       width: 20vw;
