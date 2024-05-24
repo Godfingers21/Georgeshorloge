@@ -15,7 +15,7 @@
         <div class="links">
             <nav>
                 <ul>
-                    <li><a href="presentation.html">Présentation</a></li>
+                    <li><a href="accueil.html">Accueil</a></li>
                     <li><a href="maison.html">Maison</a></li>
                     <li><a href="avis.html">Avis </a></li>
                 </ul>
@@ -28,15 +28,16 @@
         </div>
     </header>
 
+
     <div class="about">
         <h2>À Propos de Nous</h2>
         <div class="creators">
-            <div class="creator" onclick="showDescription('felix')">
-                <img src="../img/felix.jpg" alt="Félix Terrien">
+            <div class="creator" onclick="showDescription('felix')" onmouseover="changeImage('felix')" onmouseout="restoreImage('felix')">
+                <img id="felix" src="../img/felixbefore.png" alt="Félix Terrien">
                 <p>Félix Terrien</p>
             </div>
-            <div class="creator" onclick="showDescription('faycal')">
-                <img src="../img/faycal.jpg" alt="Fayçal Kordjani-Bouaziz">
+            <div class="creator" onclick="showDescription('faycal')" onmouseover="changeImage('faycal')" onmouseout="restoreImage('faycal')">
+                <img id="faycal" src="../img/faycalbefore.png" alt="Fayçal Kordjani-Bouaziz">
                 <p>Fayçal Kordjani-Bouaziz</p>
             </div>
         </div>
@@ -49,7 +50,7 @@
             <p>Description de Fayçal Kordjani-Bouaziz ici...</p>
         </div>
     </div>
-    
+
     <footer>
         <p>© 2024 Félix Terrien et Fayçal Kordjani-Bouaziz - Tous droits réservés</p>
         <p><a href="contact.html">Contactez-nous</a></p>
