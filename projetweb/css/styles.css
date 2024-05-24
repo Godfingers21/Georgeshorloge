@@ -83,7 +83,7 @@ header nav ul li a:hover {
   bottom: 55%;
   left:50%;
   transform: translate(-50%, 0);  
-  width: 50%;
+  width: 20%;
   display: flex;
   justify-content: center;
   opacity: 0;
