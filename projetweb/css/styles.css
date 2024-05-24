@@ -172,7 +172,7 @@ footer a:hover {
   color: rgb(223, 202, 174);
   border: 2px solid rgb(223, 202, 174);
   padding: 20px 50px;
-  background: radial-gradient(farthest-side,orange calc(100% - 2px) calc(100% - 1px), transparent 100%) fixed no-repeat;
+  background: radial-gradient(farthest-side,rgb(255, 38, 0) calc(100% - 2px) calc(100% - 1px), transparent 100%) fixed no-repeat;
   background-size:50px 50px; /* Control the size of the circle */
 }
 
