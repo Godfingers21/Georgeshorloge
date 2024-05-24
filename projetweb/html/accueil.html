@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" href="../img/georges.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script type="text/javascript" src="../js/script.js"></script>
+    <title>Georges Horloge</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue chez Georges Horloge</h1>
+        <div class="links">
+            <nav>
+                <ul>
+                    <li><a href="presentation.html">Présentation</a></li>
+                    <li><a href="maison.html">Maison</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="horloge" onmouseover="mouseOver()">
+            <div id="heure"></div>
+            <div id="minute"></div>
+            <div id="seconde"></div>
+        </div>
+    </header>
+    <div class="debut">
+        <div class="georges">
+            <img id="normal" src="../img/georges.png" alt="Georges Image">
+            <div class="eyes">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+        </div>
+        <p class="textesecret">Visitez ma maison et cherchez les secrets...</p>
+    </div>
+
+    <script>
+
+        
+        // Pour les yeux qui suivent la souris
+        document.addEventListener('mousemove', function(event){
+            const eyes = document.querySelectorAll('.eye');
+            const h = document.querySelector('.textesecret');
+            eyes.forEach(function(eye){
+                const rect = eye.getBoundingClientRect();
+                const x = (rect.left) + (eye.clientWidth / 2);
+                const y = (rect.top) + (eye.clientHeight / 2);
+                const radian = Math.atan2(event.pageX - x, event.pageY - y);
+                const rotation = (radian * (180 / Math.PI) * -1) + 270;
+                eye.style.transform = "rotate(" + rotation + "deg)";
+                h.style.setProperty('background-position',(event.clientX - 15)+'px '+(event.clientY - 15)+'px');
+            });
+        });
+
+        var alerted = localStorage.getItem('alerted') || '';
+        if (alerted != 'yes') {
+            alert("Attention ce site contient des secrets !");
+            localStorage.setItem('alerted','yes');
+        }
+
+        // Pour les yeux qui apparaissent quand on survole l'horloge
+        function mouseOver(){
+            document.querySelector('.eyes').style.opacity = 1;
+            setTimeout(() => {
+                document.querySelector('.eyes').style.opacity = 0;
+            }, 5000); 
+        };
+
+
+    </script>
+</body>
+</html>

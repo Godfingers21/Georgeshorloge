@@ -1,0 +1,226 @@
+body {
+  background-color: rgb(223, 202, 174);
+  font-family: 'coolveticaregular';
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(0deg, rgba(223,202,174,1) 0%, rgba(223,202,174,1) 20%, rgba(196,168,123,1) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header h1{
+  font-size: 24px;
+  overflow: hidden;
+  border-right: .15em solid orange; 
+  white-space: nowrap; 
+  margin: 0;
+  letter-spacing: .30em; /* Adjust as needed */
+  animation: 
+    typing 4s steps(60, end),
+    blink-caret .75s step-end infinite;
+}
+
+.links {
+  position: relative;/* Pour aligner les liens à gauche */
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #000; /* Couleur du texte des liens */
+  font-size: 20px; /* Taille de la police des liens */
+}
+
+header nav ul li a:hover {
+  color: #666; /* Couleur du texte des liens au survol */
+}
+
+
+.debut {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.debut img {
+  animation: fadein 5s;
+  max-width: 50%; 
+  height: auto;
+  border-radius: 10%;
+}
+
+/* Contient les yeux */
+.eyes {
+  position: absolute;
+  bottom: 55%;
+  left:50%;
+  transform: translate(-50%, 0);  
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: 2s;
+}
+
+/* Globe oculaire */
+.eye {
+  position: relative;
+  height: 5vw;
+  width : 5vw;
+  background: #fff;
+  margin: 0 9%;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+
+
+/* Pupille */
+.eye::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: #000;
+}
+
+.horloge {
+  animation: fadein 5s;
+  position: relative;
+  height: 10vw;
+  width: 10vw;
+  background: url(../img/horloge.png) no-repeat;
+  background-size: 100%;
+}
+
+#heure, #minute, #seconde {
+  position: absolute;
+  background: black;
+  border-radius: 10px;
+  transform-origin: bottom;
+}
+
+#heure {
+  width: 1.8%;
+  height: 25%;
+  top: 25%;
+  left: 48.85%;
+  opacity: 0.8;
+}
+
+#minute {
+  width: 1.6%;
+  height: 30%;
+  top: 20%;
+  left: 48.9%;
+  opacity: 0.8;
+}
+
+#seconde {
+  width: 1%;
+  height: 35%;
+  top: 15%;
+  left: 49.25%;
+  opacity: 0.8;
+}
+
+.textesecret{
+  cursor: url("../img/flashlight.png") 55 -30, auto;
+  color: rgb(223, 202, 174);
+  border: 2px solid rgb(223, 202, 174);
+  padding: 20px 50px;
+  background: radial-gradient(farthest-side,orange calc(100% - 2px) calc(100% - 1px), transparent 100%) fixed no-repeat;
+  background-size:50px 50px; /* Control the size of the circle */
+}
+
+@keyframes fadein {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: 'coolveticaregular';
+  src: url('../data/coolvetica_rg-webfont.woff2') format('woff2'),
+       url('../data/coolvetica_rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 40% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  header h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+  }
+
+  .horloge {
+      height: 20vw;
+      width: 20vw;
+  }
+
+  .eyes {
+      bottom: 56%;
+      width:50%;
+  }
+
+  .eye {
+      width: 5vw;
+      height: 5vw;
+      margin: 0 9%;
+  }
+
+  .eye::before {
+      width: 50%;
+      height: 50%;
+  }
+
+  .debut img {
+      max-width: 50%; /* Ajustement de la taille de l'image pour les écrans plus petits */
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 80% }
+  }
+} 
