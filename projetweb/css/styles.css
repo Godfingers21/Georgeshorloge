@@ -330,38 +330,37 @@ form h2 {
 
 #videoContainer {
   position: relative;
-  width: 50%; 
-  height:600px;
-  max-width: 70%;
-  margin: 0 auto;
+  width: 70%; /* Largeur maximale du conteneur vidéo */
+  max-width: 800px; /* Largeur maximale du conteneur vidéo en pixels */
+  margin: 0 auto; /* Centrer le conteneur vidéo horizontalement */
 }
 
 #loadingVideo {
-  width: 100%; 
-  height: auto; 
+  width: 100%; /* Vidéo prend 100% de la largeur du conteneur */
+  height: auto; /* Hauteur ajustée automatiquement */
 }
 
 #posterImage {
-  width: 100%; 
-  height: auto; 
+  width: 100%; /* Image prend 100% de la largeur du conteneur */
+  height: auto; /* Hauteur ajustée automatiquement */
 }
-
 
 #clickableArea {
   position: absolute;
-  top: 55%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  width: 10%; /* largeur de la zone cliquable */
-  height: 20%; /* hauteur de la zone cliquable */
-  background-color: transparent; /* pour rendre la zone cliquable invisible */
-  cursor: pointer; /* changement du curseur au survol */
-  border: solid 1px black;
+  top: 50%; /* Position verticale */
+  left: 40%; /* Position horizontale */
+  width: 10%; /* Largeur de la zone cliquable en pourcentage du conteneur */
+  padding-top: 10%; /* Même hauteur que la largeur pour créer un carré */
+  background-color: transparent; /* Zone cliquable invisible */
+  cursor: pointer; /* Curseur au survol */
+  border: solid 1px black; /* Bordure pour visualiser la zone cliquable */
 }
 
 #startButton {
   position: relative;
-  left: 40%;}
+  left: 45%; /* Position horizontale du bouton */
+}
+
 
 /* Custom animations/fonts */
 
