@@ -3,7 +3,7 @@
 <head>
     <link rel="icon" href="../img/georges.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/styles.css">
-    <script type="text/javascript" src="../js/test.js"></script>
+    <script type="text/javascript" src="../js/maison.js"></script>
     <script type="text/javascript" src="../js/global.js"></script>
     <title>Georges Horloge</title>
     <meta charset="UTF-8">
@@ -29,10 +29,16 @@
         </div>
     </header>
     
-    <button id="startButton" onclick="ClicButton()">Démarrer</button>
     <div id="videoContainer" style="display:block;">
         <video id="loadingVideo" src="../img/maison/loading1.mp4" autoplay muted style="display:none;"></video>
-        <img src="../img/maison/test1.png" id="posterImage" >
+        <img src="../img/maison/test1.png" id="posterImage" class="house">
+        <button id="startButton" onclick="ClicButton()">Tourner</button>
+        <div id="clickableArea" style="display: block;" onclick="ClicArea()"></div>
     </div>
+    <img id="finalImage" src="../img/maison/final_image.png" style="display: none;">
+    <footer>
+        <p>© 2024 Félix Terrien et Fayçal Kordjani-Bouaziz - Tous droits réservés</p>
+        <p><a href="contact.html">A propos de nous</a></p>
+    </footer>
 </body>
 </html>

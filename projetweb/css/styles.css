@@ -330,20 +330,38 @@ form h2 {
 
 #videoContainer {
   position: relative;
-  width: 100%; /* Utilise toute la largeur disponible */
-  max-width: 600px; /* Limite la largeur maximale à 600px */
-  margin: 0 auto; /* Centre le conteneur horizontalement */
+  width: 50%; 
+  height:600px;
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 #loadingVideo {
-  width: 100%; /* Utilise toute la largeur du conteneur */
-  height: auto; /* Ajuste la hauteur proportionnellement à la largeur */
+  width: 100%; 
+  height: auto; 
 }
 
 #posterImage {
-  width: 100%; /* Utilise toute la largeur du conteneur */
-  height: auto; /* Ajuste la hauteur proportionnellement à la largeur */
+  width: 100%; 
+  height: auto; 
 }
+
+
+#clickableArea {
+  position: absolute;
+  top: 55%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 10%; /* largeur de la zone cliquable */
+  height: 20%; /* hauteur de la zone cliquable */
+  background-color: transparent; /* pour rendre la zone cliquable invisible */
+  cursor: pointer; /* changement du curseur au survol */
+  border: solid 1px black;
+}
+
+#startButton {
+  position: relative;
+  left: 40%;}
 
 /* Custom animations/fonts */
 
