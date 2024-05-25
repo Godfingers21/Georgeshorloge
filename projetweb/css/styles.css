@@ -60,6 +60,30 @@ header nav ul li a:hover {
   color: #666;
 }
 
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
 
 /* Accueil */
 
@@ -229,6 +253,97 @@ footer a:hover {
   border-bottom: 1px solid transparent;
 }
 
+/* Avis */
+
+#LesAvis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+form {
+  background: rgb(181, 145, 113);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.bloc {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.bloc label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.bloc input, 
+.bloc textarea, 
+.bloc select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #c4a181;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  margin-left: 10px;
+}
+
+.bloc input:focus, 
+.bloc textarea:focus, 
+.bloc select:focus {
+  border-color: #4d2929;
+  outline: none;
+}
+
+.choices {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.choices label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.choices input {
+  margin: 0;
+}
+
+
+/* Maison */
+
+#videoContainer {
+  position: relative;
+  width: 100%; /* Utilise toute la largeur disponible */
+  max-width: 600px; /* Limite la largeur maximale à 600px */
+  margin: 0 auto; /* Centre le conteneur horizontalement */
+}
+
+#loadingVideo {
+  width: 100%; /* Utilise toute la largeur du conteneur */
+  height: auto; /* Ajuste la hauteur proportionnellement à la largeur */
+}
+
+#posterImage {
+  width: 100%; /* Utilise toute la largeur du conteneur */
+  height: auto; /* Ajuste la hauteur proportionnellement à la largeur */
+}
 
 /* Custom animations/fonts */
 
@@ -310,87 +425,3 @@ footer a:hover {
     to { width: 80% }
   }
 } 
-
-/*Avis design*/
-
-#LesAvis {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-form {
-  background: rgb(181, 145, 113);
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-  text-align: center;
-}
-
-form h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
-}
-
-.bloc {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.bloc label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.bloc input, 
-.bloc textarea, 
-.bloc select {
-  width: calc(100% - 20px);
-  padding: 10px;
-  border: 1px solid #c4a181;
-  border-radius: 5px;
-  transition: border-color 0.3s;
-  margin-left: 10px;
-}
-
-.bloc input:focus, 
-.bloc textarea:focus, 
-.bloc select:focus {
-  border-color: #4d2929;
-  outline: none;
-}
-
-.choices {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.choices label {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.choices input {
-  margin: 0;
-}
-
-button {
-  background: #000000;
-  color: rgb(252, 252, 252);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  width: calc(100% - 20px);
-  margin-left: 10px;
-}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Logo Animation with Bouncing Image</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(45deg, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
+            background-size: 200% 200%;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+
+        .logo {
+            width: 10vmin;
+            height: 10vmin;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png');
+            background-size: cover;
+            position: absolute;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .bouncing-image {
+            width: 35vmin;
+            height: 20vmin;
+            background-image: url('../img/lover.png');
+            background-size: cover;
+            position: absolute;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bouncing-image" id="bouncingImage"></div>
+    <div class="logo" id="logo"></div>
+
+    <script>
+        var logo = document.getElementById('logo');
+        var bouncingImage = document.getElementById('bouncingImage');
+
+        document.addEventListener('mousemove', function(e) {
+            logo.style.left = e.clientX + 'px';
+            logo.style.top = e.clientY + 'px';
+        });
+
+        var x = 0;
+        var y = 0;
+        var dx = 2;
+        var dy = 2;
+
+        function bounce() {
+            x += dx;
+            y += dy;
+
+            if (x + bouncingImage.offsetWidth >= window.innerWidth || x <= 0) {
+                dx = -dx;
+            }
+
+            if (y + bouncingImage.offsetHeight >= window.innerHeight || y <= 0) {
+                dy = -dy;
+            }
+
+            bouncingImage.style.left = x + 'px';
+            bouncingImage.style.top = y + 'px';
+
+            requestAnimationFrame(bounce);
+        }
+
+        bounce();
+
+        window.addEventListener('resize', function() {
+            if (x + bouncingImage.offsetWidth > window.innerWidth) {
+                x = window.innerWidth - bouncingImage.offsetWidth;
+            }
+            if (y + bouncingImage.offsetHeight > window.innerHeight) {
+                y = window.innerHeight - bouncingImage.offsetHeight;
+            }
+        });
+
+        logo.addEventListener('click', function() {
+            var instagramURL = 'https://www.instagram.com/felix_trien/';
+            window.open(instagramURL, '_blank');
+            window.location.href = 'contact.html';
+            
+        });
+    </script>
+</body>
+</html>

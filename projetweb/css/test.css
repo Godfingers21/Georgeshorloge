@@ -1,0 +1,17 @@
+#videoContainer {
+    position: relative;
+    width: 100%; /* Utilise toute la largeur disponible */
+    max-width: 600px; /* Limite la largeur maximale à 600px */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+}
+
+#loadingVideo {
+    width: 100%; /* Utilise toute la largeur du conteneur */
+    height: auto; /* Ajuste la hauteur proportionnellement à la largeur */
+}
+
+#posterImage {
+    width: 100%; /* Utilise toute la largeur du conteneur */
+    height: auto; /* Ajuste la hauteur proportionnellement à la largeur */
+}
+
