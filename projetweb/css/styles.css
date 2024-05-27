@@ -1,8 +1,7 @@
 /* Général */
 
 html {
-  position: relative;
-  min-height: 100%;
+  position: relative; 
 }
 
 body {
@@ -82,6 +81,33 @@ button:active {
 button:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  transition: border-bottom 0.3s ease;
+}
+
+footer a:hover {
+  border-bottom: 1px solid transparent;
 }
 
 
@@ -228,30 +254,6 @@ button:focus {
 }
 
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-footer p {
-  margin: 5px 0;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
-  border-bottom: 1px solid #fff;
-  transition: border-bottom 0.3s ease;
-}
-
-footer a:hover {
-  border-bottom: 1px solid transparent;
-}
 
 /* Avis */
 
@@ -330,9 +332,9 @@ form h2 {
 
 #videoContainer {
   position: relative;
-  width: 70%; /* Largeur maximale du conteneur vidéo */
-  max-width: 800px; /* Largeur maximale du conteneur vidéo en pixels */
-  margin: 0 auto; /* Centrer le conteneur vidéo horizontalement */
+  width: 100%; /* Largeur maximale du conteneur vidéo */
+  max-width: 60%; /* Largeur maximale du conteneur vidéo en pixels */
+  left : 25%;
 }
 
 #loadingVideo {
@@ -353,12 +355,17 @@ form h2 {
   padding-top: 10%; /* Même hauteur que la largeur pour créer un carré */
   background-color: transparent; /* Zone cliquable invisible */
   cursor: pointer; /* Curseur au survol */
-  border: solid 1px black; /* Bordure pour visualiser la zone cliquable */
 }
 
 #startButton {
   position: relative;
-  left: 45%; /* Position horizontale du bouton */
+  left: 37%;
+  bottom: 80px; /* Position horizontale du bouton */
+}
+
+#finalImage {
+  margin: 0 auto;
+  max-width: 40%; 
 }
 
 
@@ -374,13 +381,6 @@ form h2 {
   }
 }
 
-@font-face {
-  font-family: 'coolveticaregular';
-  src: url('../data/coolvetica_rg-webfont.woff2') format('woff2'),
-       url('../data/coolvetica_rg-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
 @keyframes typing {
   from { width: 0 }
@@ -391,6 +391,15 @@ form h2 {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
+}
+
+
+@font-face {
+  font-family: 'coolveticaregular';
+  src: url('../data/coolvetica_rg-webfont.woff2') format('woff2'),
+       url('../data/coolvetica_rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Responsive Design */
