@@ -1,4 +1,3 @@
-
 const images = ['../img/maison/test1.png', '../img/maison/test2.png', '../img/maison/test3.png', '../img/maison/test4.png'];
 const videos = ['../img/maison/loading1.mp4','../img/maison/loading2.mp4','../img/maison/loading3.mp4','../img/maison/loading4.mp4'];
 let compteur = 0;
