@@ -361,7 +361,6 @@ button[type="submit"]:hover {
 }
 
 #afterClic {
-  border: solid black 1px;
   width: 50%;
   margin: 0 auto;
 }
@@ -374,12 +373,65 @@ button[type="submit"]:hover {
 #input {
   margin : 0 auto;
   right : 10%;
-  width: 12%;
+  width: 23%;
   padding: 20px;
   border-radius: 10% ;
+
+}
+#chiffres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+  top: 46%;
+  left: 45.5%;
+  transform: rotate(6deg);
 }
 
+#chiffres p {
+  margin: 0 7px;
+  font-size: 2em; /* Ajustez la taille de la police selon vos besoins */
+}
 
+#up{
+  cursor: pointer;
+  position: absolute;
+  top:43%;
+  left:46%;
+  margin : 0 auto;
+  width:6%;
+  transform: rotate(6deg);
+  
+}  
+
+.haut{
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding:5px;
+  transform: rotate(-135deg);
+  margin-right: 15%;
+}
+
+#down{
+  cursor: pointer;
+  position: absolute;
+  top:52%;
+  left:46%;
+  margin : 0 auto;
+  width:6%;
+  transform: rotate(6deg);
+  
+}  
+
+.bas{
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding:5px;
+  transform: rotate(45deg);
+  margin-right: 15%;
+}
 
 /* Custom animations/fonts */
 

@@ -50,11 +50,32 @@ function modifyInput(){
   const textInput = document.getElementById('textInput');
   const Input = document.getElementById('input');
   if (textInput.value === "203") {
-    Input.style.background = 'green';
+    Input.style.background = 'radial-gradient(green 0%, #dfcaae 70%)';
+    document.getElementById("finalImage").src = "../img/maison/dooropened.png";
+    document.getElementById("fleches").style.display = "none";
+    Input.style.display = "none";
+
+
 } else {
     Input.style.background = 'radial-gradient(#cc0a0a 0%, #dfcaae 70%)'; // Rouge moins intense
     setTimeout(() => {
         Input.style.background = 'rgb(223, 202, 174)';
     }, 100);
 }
+}
+
+function increment(chiffreId) {
+  const chiffreElement = document.getElementById(chiffreId);
+  let currentValue = chiffreElement.textContent;
+  if (currentValue < 9) {
+      chiffreElement.innerText = currentValue + 1;
+  }
+}
+
+function decrement(chiffreId) {
+  const chiffreElement = document.getElementById(chiffreId);
+  let currentValue = chiffreElement.textContent
+  if (currentValue > 0) {
+      chiffreElement.innerText = currentValue - 1;
+  }
 }
