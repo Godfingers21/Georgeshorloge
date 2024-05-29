@@ -5,8 +5,10 @@
     <link rel="stylesheet" href="../css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avis</title>
+    
 </head>
 <body>
+    <script src="../js/avis.js"></script> <!--Je crée une liaison entre la page html avis et le fichier avis.js pour accéder au code script-->
     <header>
         <div class="titre">
             <h1>Venez visiter ma maison</h1>
@@ -27,8 +29,10 @@
         </div>
     </header>
 
+    <div><img src="../img/Code_secret.png" id = "interne"></div>
+
     <div id="formular">
-        <form>
+        <form id = "draggableForm">
             <h2>Donnez votre avis</h2>
             
             <div class="bloc">
@@ -48,7 +52,7 @@
 
             <div class="bloc">
                 <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <input id="message" name="message" rows="4" required></input>
             </div>
 
             <div class="bloc">
@@ -62,18 +66,47 @@
                 </select>
             </div>
 
-            <div class="bloc">
-                <label for="feedback">Commentaires supplémentaires :</label>
-                <textarea id="feedback" name="feedback" rows="4"></textarea>
-            </div>
+
 
             <button type="submit">Envoyer</button>
         </form>
 
+        <!--Programme pour pouvoir intéragir avec le formulaire-->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const draggableForm = document.getElementById('draggableForm');
+    
+                draggableForm.addEventListener('mousedown', function (e) {
+                    let shiftX = e.clientX - draggableForm.getBoundingClientRect().left;
+                    let shiftY = e.clientY - draggableForm.getBoundingClientRect().top;
+    
+                    function moveAt(pageX, pageY) {
+                        draggableForm.style.left = pageX - shiftX + 'px';
+                        draggableForm.style.top = pageY - shiftY + 'px';
+                    }
+    
+                    function onMouseMove(event) {
+                        moveAt(event.pageX, event.pageY);
+                    }
+    
+                    document.addEventListener('mousemove', onMouseMove);
+    
+                    draggableForm.addEventListener('mouseup', function () {
+                        document.removeEventListener('mousemove', onMouseMove);
+                        draggableForm.onmouseup = null;
+                    });
+    
+                    draggableForm.ondragstart = function () {
+                        return false;
+                    };
+                });
+            });
+        </script>
+    
         <div id="aftersubmit">
             <img src="../img/faycalafter.png" style = "display:none" onclick="afterSubmit()">
         </div>
-        
+
     </div>
 
     <footer>
