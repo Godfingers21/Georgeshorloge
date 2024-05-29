@@ -387,7 +387,7 @@ button[type="submit"]:hover {
   justify-content: center;
   align-items: center;
   position: absolute; 
-  top: 46%;
+  top: 50%;
   left: 45.5%;
   transform: rotate(6deg);
 }
@@ -400,7 +400,7 @@ button[type="submit"]:hover {
 #up{
   cursor: pointer;
   position: absolute;
-  top:43%;
+  top:46%;
   left:46%;
   margin : 0 auto;
   width:6%;
@@ -420,7 +420,7 @@ button[type="submit"]:hover {
 #down{
   cursor: pointer;
   position: absolute;
-  top:52%;
+  top:56%;
   left:46%;
   margin : 0 auto;
   width:6%;
