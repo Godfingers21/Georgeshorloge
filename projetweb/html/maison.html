@@ -35,7 +35,12 @@
         <button id="startButton" onclick="ClicButton()">Tourner</button>
         <div id="clickableArea" style="display: block;" onclick="ClicArea()"></div>
     </div>
-    <img id="finalImage" src="../img/maison/final_image.png" style="display: none;">
+    <div id="afterClic" style="display: none;">
+        <img id="finalImage" src="../img/maison/final_image.png">
+        <div id="input">
+            <input type="text" id="textInput" placeholder="Type something..." oninput="modifyInput()">
+        </div>
+    </div>
     <footer>
         <p>© 2024 Félix Terrien et Fayçal Kordjani-Bouaziz - Tous droits réservés</p>
         <p><a href="contact.html">A propos de nous</a></p>

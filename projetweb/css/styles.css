@@ -256,15 +256,9 @@ footer a:hover {
 
 
 /* Avis */
-#LesAvis {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
 
 form {
+  margin : 0 auto;
   background: rgb(181, 145, 113);
   padding: 40px;
   border-radius: 10px;
@@ -278,6 +272,7 @@ form h2 {
   margin-bottom: 20px;
   font-size: 24px;
   color: #333;
+  cursor : move;
 }
 
 .bloc {
@@ -377,10 +372,25 @@ footer a:hover {
   bottom: 80px; /* Position horizontale du bouton */
 }
 
-#finalImage {
+#afterClic {
+  border: solid black 1px;
+  width: 50%;
   margin: 0 auto;
-  max-width: 40%; 
 }
+
+#finalImage{
+  max-width: 100%; 
+}
+
+
+#input {
+  margin : 0 auto;
+  right : 10%;
+  width: 12%;
+  padding: 20px;
+  border-radius: 10% ;
+}
+
 
 
 /* Custom animations/fonts */

@@ -3,6 +3,7 @@ const videos = ['../img/maison/loading1.mp4','../img/maison/loading2.mp4','../im
 let compteur = 0;
 let i = 1;
 
+
 function ClicButton(){
     if (compteur === 3){
         compteur = 0;
@@ -38,9 +39,22 @@ function ClicButton(){
 
 function ClicArea() {
 
-  var finalImage = document.getElementById("finalImage");
+  var afterClic = document.getElementById("afterClic");
   var container = document.getElementById("videoContainer");
   container.style.display = "none";
-  finalImage.style.display = "block";
+  afterClic.style.display = "block";
 };
 
+
+function modifyInput(){
+  const textInput = document.getElementById('textInput');
+  const Input = document.getElementById('input');
+  if (textInput.value === "203") {
+    Input.style.background = 'green';
+} else {
+    Input.style.background = 'radial-gradient(#cc0a0a 0%, #dfcaae 70%)'; // Rouge moins intense
+    setTimeout(() => {
+        Input.style.background = 'rgb(223, 202, 174)';
+    }, 100);
+}
+}

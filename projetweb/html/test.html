@@ -6,7 +6,9 @@
     <title>Flash Background Color</title>
     <style>
         body {
+            background-color: 'rgb(223, 202, 174)' ;
             transition: background-color 0.5s;
+            
         }
     </style>
 </head>
@@ -22,7 +24,7 @@
             } else {
                 document.body.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'; // Rouge moins intense
                 setTimeout(() => {
-                    document.body.style.backgroundColor = '';
+                    document.body.style.backgroundColor = 'rgb(223, 202, 174)';
                 }, 200);
             }
         });
