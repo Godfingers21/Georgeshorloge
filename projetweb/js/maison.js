@@ -46,15 +46,29 @@ function ClicArea() {
 };
 
 
-function modifyInput(){
-  const textInput = document.getElementById('textInput');
-  const Input = document.getElementById('input');
-  if (textInput.value === "203") {
-    Input.style.background = 'green';
-} else {
-    Input.style.background = 'radial-gradient(#cc0a0a 0%, #dfcaae 70%)'; // Rouge moins intense
-    setTimeout(() => {
-        Input.style.background = 'rgb(223, 202, 174)';
-    }, 100);
+
+function increment(chiffreId) {
+  const chiffreElement = document.getElementById(chiffreId);
+  const zero = parseInt(document.getElementById("0").textContent);
+  const un = parseInt(document.getElementById("1").textContent);
+  const deux = parseInt(document.getElementById("2").textContent);
+
+  let currentValue = parseInt(chiffreElement.textContent);
+  if (currentValue < 9) {
+      chiffreElement.innerText = currentValue + 1;
+  }
+  if(zero === 2 && un === 0 && deux === 3){
+    document.getElementById("finalImage").src = "../img/maison/dooropened.png";
+    document.getElementById("fleches").style.display = "none";
+    document.getElementById("chiffres").style.display= "none";
+    document.getElementById('input').style.display = "none";
+  }
 }
+
+function decrement(chiffreId) {
+  const chiffreElement = document.getElementById(chiffreId);
+  let currentValue = parseInt(chiffreElement.textContent);
+  if (currentValue > 0) {
+      chiffreElement.innerText = currentValue - 1;
+  }
 }
