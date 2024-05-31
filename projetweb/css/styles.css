@@ -257,6 +257,16 @@ footer a:hover {
 
 /* Avis */
 
+#aftersubmit{
+  position: absolute;
+  left: 45%;
+  top: 10 0%;
+  width:50%;
+} 
+
+#hiddenimage{
+  width:30%;
+}
 #formular{
   width: 35%;
   margin: 0 auto;
@@ -266,8 +276,8 @@ footer a:hover {
 form {
   margin : 0 auto;
   background: rgb(181, 145, 113);
-  padding: 40px;
-  border-radius: 10px;
+  padding: 3%;
+  border-radius: 10%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   width: 100%;
@@ -374,14 +384,7 @@ button[type="submit"]:hover {
 }
 
 
-#input {
-  margin : 0 auto;
-  right : 10%;
-  width: 23%;
-  padding: 20px;
-  border-radius: 10% ;
 
-}
 #chiffres {
   display: flex;
   justify-content: center;
@@ -403,7 +406,7 @@ button[type="submit"]:hover {
   top:46%;
   left:46%;
   margin : 0 auto;
-  width:6%;
+  width:8%;
   transform: rotate(6deg);
   
 }  
@@ -423,7 +426,7 @@ button[type="submit"]:hover {
   top:56%;
   left:46%;
   margin : 0 auto;
-  width:6%;
+  width:8%;
   transform: rotate(6deg);
   
 }  
@@ -436,6 +439,19 @@ button[type="submit"]:hover {
   transform: rotate(45deg);
   margin-right: 15%;
 }
+
+
+/* Final */
+
+#finalbody{
+  display: flex;
+  justify-content:left
+}
+
+video{
+  width: 50%;
+}
+
 
 /* Custom animations/fonts */
 

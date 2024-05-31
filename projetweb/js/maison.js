@@ -49,20 +49,12 @@ function ClicArea() {
 
 function increment(chiffreId) {
   const chiffreElement = document.getElementById(chiffreId);
-  const zero = parseInt(document.getElementById("0").textContent);
-  const un = parseInt(document.getElementById("1").textContent);
-  const deux = parseInt(document.getElementById("2").textContent);
 
   let currentValue = parseInt(chiffreElement.textContent);
   if (currentValue < 9) {
       chiffreElement.innerText = currentValue + 1;
   }
-  if(zero === 2 && un === 0 && deux === 3){
-    document.getElementById("finalImage").src = "../img/maison/dooropened.png";
-    document.getElementById("fleches").style.display = "none";
-    document.getElementById("chiffres").style.display= "none";
-    document.getElementById('input').style.display = "none";
-  }
+  checkCode();
 }
 
 function decrement(chiffreId) {
@@ -70,5 +62,19 @@ function decrement(chiffreId) {
   let currentValue = parseInt(chiffreElement.textContent);
   if (currentValue > 0) {
       chiffreElement.innerText = currentValue - 1;
+  }
+  checkCode();
+}
+
+function checkCode() {
+  const zero = parseInt(document.getElementById("0").textContent);
+  const un = parseInt(document.getElementById("1").textContent);
+  const deux = parseInt(document.getElementById("2").textContent);
+
+  if (zero === 2 && un === 0 && deux === 3) {
+      document.getElementById("finalLink").setAttribute("href","final.html");
+      document.getElementById("finalImage").src = "../img/maison/dooropened.png";
+      document.getElementById("fleches").style.display = "none";
+      document.getElementById("chiffres").style.display = "none";
   }
 }
