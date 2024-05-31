@@ -330,9 +330,10 @@ form h2 {
 
 #videoContainer {
   position: relative;
-  width: 70%; /* Largeur maximale du conteneur vidéo */
-  max-width: 800px; /* Largeur maximale du conteneur vidéo en pixels */
+  width: 100%; /* Largeur maximale du conteneur vidéo */
+  max-width: 1000px; /* Largeur maximale du conteneur vidéo en pixels */
   margin: 0 auto; /* Centrer le conteneur vidéo horizontalement */
+  border: solid 1px black;
 }
 
 #loadingVideo {
