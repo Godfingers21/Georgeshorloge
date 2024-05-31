@@ -1,8 +1,7 @@
 /* Général */
 
 html {
-  position: relative;
-  min-height: 100%;
+  position: relative; 
 }
 
 body {
@@ -82,6 +81,33 @@ button:active {
 button:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  transition: border-bottom 0.3s ease;
+}
+
+footer a:hover {
+  border-bottom: 1px solid transparent;
 }
 
 
@@ -228,45 +254,30 @@ button:focus {
 }
 
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-footer p {
-  margin: 5px 0;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
-  border-bottom: 1px solid #fff;
-  transition: border-bottom 0.3s ease;
-}
-
-footer a:hover {
-  border-bottom: 1px solid transparent;
-}
 
 /* Avis */
 
-#LesAvis {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+#aftersubmit{
+  position: absolute;
+  left: 45%;
+  top: 10 0%;
+  width:50%;
+} 
+
+#hiddenimage{
+  width:30%;
+}
+#formular{
+  width: 35%;
+  margin: 0 auto;
+  border-color: #000;
 }
 
 form {
+  margin : 0 auto;
   background: rgb(181, 145, 113);
-  padding: 40px;
-  border-radius: 10px;
+  padding: 3%;
+  border-radius: 10%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   width: 100%;
@@ -277,6 +288,7 @@ form h2 {
   margin-bottom: 20px;
   font-size: 24px;
   color: #333;
+  cursor : move;
 }
 
 .bloc {
@@ -293,12 +305,11 @@ form h2 {
 .bloc input, 
 .bloc textarea, 
 .bloc select {
-  width: calc(100% - 20px);
+  width: 100%;
   padding: 10px;
   border: 1px solid #c4a181;
   border-radius: 5px;
   transition: border-color 0.3s;
-  margin-left: 10px;
 }
 
 .bloc input:focus, 
@@ -308,32 +319,33 @@ form h2 {
   outline: none;
 }
 
-.choices {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.choices label {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+button[type="submit"] {
+  background-color: #4d2929;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
 }
 
-.choices input {
-  margin: 0;
+button[type="submit"]:hover {
+  background-color: #333;
 }
 
+#draggableForm {
+  position: absolute;
+  cursor: move;
+}
 
 /* Maison */
 
 #videoContainer {
   position: relative;
   width: 100%; /* Largeur maximale du conteneur vidéo */
-  max-width: 1000px; /* Largeur maximale du conteneur vidéo en pixels */
-  margin: 0 auto; /* Centrer le conteneur vidéo horizontalement */
-  border: solid 1px black;
+  max-width: 60%; /* Largeur maximale du conteneur vidéo en pixels */
+  left : 25%;
 }
 
 #loadingVideo {
@@ -354,12 +366,90 @@ form h2 {
   padding-top: 10%; /* Même hauteur que la largeur pour créer un carré */
   background-color: transparent; /* Zone cliquable invisible */
   cursor: pointer; /* Curseur au survol */
-  border: solid 1px black; /* Bordure pour visualiser la zone cliquable */
 }
 
 #startButton {
   position: relative;
-  left: 45%; /* Position horizontale du bouton */
+  left: 37%;
+  bottom: 80px; /* Position horizontale du bouton */
+}
+
+#afterClic {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#finalImage{
+  max-width: 100%; 
+}
+
+
+
+#chiffres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+  top: 50%;
+  left: 45.5%;
+  transform: rotate(6deg);
+}
+
+#chiffres p {
+  margin: 0 7px;
+  font-size: 2em; /* Ajustez la taille de la police selon vos besoins */
+}
+
+#up{
+  cursor: pointer;
+  position: absolute;
+  top:46%;
+  left:46%;
+  margin : 0 auto;
+  width:8%;
+  transform: rotate(6deg);
+  
+}  
+
+.haut{
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding:5px;
+  transform: rotate(-135deg);
+  margin-right: 15%;
+}
+
+#down{
+  cursor: pointer;
+  position: absolute;
+  top:56%;
+  left:46%;
+  margin : 0 auto;
+  width:8%;
+  transform: rotate(6deg);
+  
+}  
+
+.bas{
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding:5px;
+  transform: rotate(45deg);
+  margin-right: 15%;
+}
+
+
+/* Final */
+
+#finalbody{
+  display: flex;
+  justify-content:left
+}
+
+video{
+  width: 50%;
 }
 
 
@@ -375,13 +465,6 @@ form h2 {
   }
 }
 
-@font-face {
-  font-family: 'coolveticaregular';
-  src: url('../data/coolvetica_rg-webfont.woff2') format('woff2'),
-       url('../data/coolvetica_rg-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
 @keyframes typing {
   from { width: 0 }
@@ -392,6 +475,15 @@ form h2 {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
+}
+
+
+@font-face {
+  font-family: 'coolveticaregular';
+  src: url('../data/coolvetica_rg-webfont.woff2') format('woff2'),
+       url('../data/coolvetica_rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Responsive Design */

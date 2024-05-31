@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIF et Image</title>
-    <link rel="stylesheet" href="../css/test.css">
+    <title>Flash Background Color</title>
+    <style>
+        body {
+            background-color: 'rgb(223, 202, 174)' ;
+            transition: background-color 0.5s;
+            
+        }
+    </style>
 </head>
 <body>
-    <div id="startButton" onclick="ClicButton()">
-        <p>Gros caca</p>
-    </div>
-    <div id="videoContainer" style="display:block;">
-        <video id="loadingVideo" src="../img/maison/loading1.mp4" autoplay muted style="display:none;"></video>
-        <img src="../img/maison/test1.png" id="posterImage" >
-    </div>
-    <script src="../js/test.js"></script>
+    <input type="text" id="textInput" placeholder="Type something...">
+
+    <script>
+        const textInput = document.getElementById('textInput');
+
+        textInput.addEventListener('input', () => {
+            if (textInput.value === "203") {
+                document.body.style.backgroundColor = 'green';
+            } else {
+                document.body.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'; // Rouge moins intense
+                setTimeout(() => {
+                    document.body.style.backgroundColor = 'rgb(223, 202, 174)';
+                }, 200);
+            }
+        });
+    </script>
 </body>
 </html>
